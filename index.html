@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    
+    <!-- Added Firebase JS -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+     <!-- Added Moment JS -->
+     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h2 class="title">Intergalatic Space Travel</h2>
+        <div id="currentDate"></div>
+        <div id="currentTime"></div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Current Train Schedule Table -->
+            <div class="section">
+                <table id="currentSchedule" class="highlight">
+                    <thead>
+                        <tr>
+                            <h4>Current Train Schedule: </h4>
+                        </tr>
+                        <tr>
+                            <th id="trainName">Train Name</th>
+                            <th id="destination">Destination</th>
+                            <th id="frequency">Frequency (min)</th>
+                            <th id="nextArrival">Next Arrival</th>
+                            <th id="minsAway">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Intergalatic Amtrak</td>
+                            <td>Pluto</td>
+                            <td>10</td>
+                            <td>10:00 am</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Add Train Form -->
+            <div class="section">
+
+                <form class="row">
+                    <div class="col s12">
+                        <h4>Add Train:</h4>
+                        <div class="input-field">
+                            <input id="addTrainName" type="text" class="">
+                            <label for="add_TrainName">Train Name</label>
+                        </div>
+                        <div class="input-field ">
+                            <input id="addDestination" type="text" class="">
+                            <label for="add_Destination">Destination</label>
+                        </div>
+                        <div class="input-field ">
+                            <input id="addFirstTrain" type="text" class="">
+                            <label for="add_FirstTrain">First Train Time (military)</label>
+                        </div>
+                        <div class="input-field ">
+                            <input id="addFrequency" type="number" class="">
+                            <label for="add_Frequency">Frequency (minutes)</label>
+                        </div>
+                        <button id="addTrainButton" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- JS an jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="assets/javascript/trainschedule.js"></script>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
